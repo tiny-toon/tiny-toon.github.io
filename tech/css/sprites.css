@@ -1,0 +1,10 @@
+.sprite{
+	background: url(sprites.png) no-repeat;
+}
+
+.sprite{
+	background-position: 0 0;
+	width: 350px;
+	height: 250px;
+}
+
