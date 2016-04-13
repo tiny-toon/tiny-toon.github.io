@@ -1,6 +1,4 @@
 body {
-/*    min-width: 960px;*/
-/*    margin: 0 auto;*/
     font: 100%/1.5em "Ubuntu", "Arial", sans-serif;
     color: #000;
 }
@@ -20,6 +18,55 @@ body {
     text-align: center;
 }
 
+/***************************************
+flexible media
+****************************************/
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/***************************************
+fluid fgreed
+****************************************/
+
+    .container .cols.col-1,
+    .container .cols.col-2,
+    .container .cols.col-3,
+    .container .cols.col-4,
+    .container .cols.col-5,
+    .container .cols.col-6,
+    .container .cols.col-7,
+    .container .cols.col-8,
+    .container .cols.col-9,
+    .container .cols.col-10,
+    .container .cols.col-11,
+    .container .cols.col-12 { width: 100%; }
+
+.container .cols {
+    box-sizing: border-box;
+}
+
+.container:before,
+.container:after,
+.row:before,
+.row:after,
+clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (mIN-width: 321px) {
+    h1 {
+        color: blue;
+    }
+
 .container .cols.col-1 { width: 8.3333333333%; }
 .container .cols.col-2 { width: 16.666666667%; }
 .container .cols.col-3 { width: 25%; }
@@ -32,18 +79,40 @@ body {
 .container .cols.col-10 { width: 83.333333333%; }
 .container .cols.col-11 { width: 91.666666666%; }
 .container .cols.col-12 { width: 100%; }
+    
+    body:after {
+        content: "привет телефон";
+        background-color: aqua;
+    }
+    
+}
 
-.container .cols {
-    box-sizing: border-box;
+.cols.col-9 {
+    margin: 0 auto;
+}
+
+.cols.col-12 {
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+.main-nav li {
+    display: inline-block;
 }
 
 
-.container:before,
-.container:after,
-.row:before,
-.row:after,
-clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+.our-logo {
+    float: left;
+    margin-left: 1.25em;
+}
+
+.our-logo .dot {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin-right: 0.625em;
+    font-size: 0;
+    border-radius: 50%;
+    background-color: aqua;
+    
 }
